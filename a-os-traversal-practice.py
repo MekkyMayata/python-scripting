@@ -6,10 +6,7 @@ print(cwd)
 
 # create a directory
 directory = str(input("enter name of dir to create: "))
-if os.path.exists(cwd + "/" + directory):
-    print("folder 'my_dir' already exists")
-else:
-    os.mkdir(directory)
+print(f"folder {directory} already exists") if os.path.exists(cwd + "/" + directory) else os.mkdir(directory)
 
 # list directory
 list_dir = os.listdir()
